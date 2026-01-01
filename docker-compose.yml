@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:
-      - "3000:80"
+      - "11111:80"
     # Uncomment lines below if you want to persist settings even if container is destroyed (optional)
     # volumes:
     #   - ./metadata.json:/usr/share/nginx/html/metadata.json 
