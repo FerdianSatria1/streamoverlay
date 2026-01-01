@@ -1,14 +1,12 @@
-version: '3.8'
+version: "3.8"
 
 services:
   streampulse:
+    image: nginx:alpine
     container_name: streampulse-overlay
-    build:
-      context: .
-      dockerfile: Dockerfile
     restart: unless-stopped
     ports:
       - "11111:80"
-    # Uncomment lines below if you want to persist settings even if container is destroyed (optional)
-    # volumes:
-    #   - ./metadata.json:/usr/share/nginx/html/metadata.json 
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./metadata.json:/usr/share/nginx/html/metadata.json:ro
