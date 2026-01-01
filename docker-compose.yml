@@ -8,5 +8,4 @@ services:
     ports:
       - "11111:80"
     volumes:
-      - ./index.html:/usr/share/nginx/html/index.html:ro
-      - ./metadata.json:/usr/share/nginx/html/metadata.json:ro
+      - ./:/usr/share/nginx/html:ro
